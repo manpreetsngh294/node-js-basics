@@ -1,14 +1,24 @@
-car = {
-  name: 'Kia',
-  drive: () => {
-    console.log(`${this.name} is driving`);
-  }
-};
+// let foo = () => {
+//   this.year = 2019;
+//   //let year = 2019;
 
-//  calling the function on an object
-car.drive();
+//   console.log(this.year);
+// };
 
-//  let's take the function outside
-let anotherDrive = car.drive;
+// foo();
 
-anotherDrive();
+// car = {
+//   //name: 'Jetta',
+//   drive: function() {
+//     console.log(this.name);
+//   }
+// };
+
+// car.drive();
+
+let name = 'J';
+function drive() {
+  console.log(this.name);
+}
+
+drive();
