@@ -11,6 +11,6 @@ let car = {
 };
 
 console.log(car.model);
-console.log(car.owner.name.lastName.x);
+console.log(car.owner.name.lastName);
 
 car.drive();
