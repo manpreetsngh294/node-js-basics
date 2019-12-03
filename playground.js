@@ -1,12 +1,8 @@
 car = {
   name: 'Kia',
-  drive: function() {
+  drive: () => {
     console.log(`${this.name} is driving`);
   }
-};
-
-anotherCar = {
-  name: 'MG Hector'
 };
 
 //  calling the function on an object
@@ -16,7 +12,3 @@ car.drive();
 let anotherDrive = car.drive;
 
 anotherDrive();
-
-//  another object
-anotherCar.drive = car.drive;
-anotherCar.drive();
