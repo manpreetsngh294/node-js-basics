@@ -4,7 +4,10 @@ const PI = 3.1415;
 const E = 2.71828;
 
 car = {
-  name: 'Suzuki'
+  name: 'Suzuki',
+  drive: function() {
+    console.log(`${this.name} is driving`);
+  }
 };
 
 function foo() {
@@ -14,6 +17,7 @@ function foo() {
 //  CommonJS export system
 module.exports = {
   variable,
+  car,
   constants: {
     PI,
     E
