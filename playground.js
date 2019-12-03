@@ -1,6 +1,6 @@
 //  CommonJS import system
-const { PI, variable, bar } = require('./library');
+const { constants, variable, bar } = require('./library');
 
-console.log(variable);
+console.log(constants.E);
 
 bar();
