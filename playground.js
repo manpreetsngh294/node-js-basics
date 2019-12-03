@@ -1,22 +1,11 @@
-car = {
-  name: 'Kia',
-  drive: function() {
-    console.log(`${this.name} is driving`);
-  }
-};
+console.log('Module this', this);
 
-anotherCar = {
-  name: 'MG Hector'
-};
+(function() {
+  console.log('Function this', this);
+})();
 
-//  calling the function on an object
-car.drive();
+(() => {
+  console.log('Lambda this', this);
+})();
 
-//  let's take the function outside
-let anotherDrive = car.drive;
-
-anotherDrive();
-
-//  another object
-anotherCar.drive = car.drive;
-anotherCar.drive();
+console.log('Global object', global);
