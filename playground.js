@@ -1,17 +1,16 @@
-//  Call is legal even for: too many parameters, too few parameters
-//  Cannot enforce the types of parameters
+let car = {
+  model: 'MG Hector',
+  owner: {
+    name: 'Sunil',
+    city: 'Bengaluru'
+  },
+  drive: function() {
+    console.log('drives');
+  },
+  wheels: ['RX19', 'RY19']
+};
 
-//  Usual boiler-plate in case type should be enforced
-function namedFoo(param) {
-  if (param) {
-    if (typeof param === 'number') {
-      console.log(param);
-    } else {
-      console.log('pass a number');
-    }
-  } else {
-    console.log('no parameter passed');
-  }
-}
+console.log(car.model);
+console.log(car.owner.name.lastName.x);
 
-namedFoo();
+car.drive();
