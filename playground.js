@@ -1,22 +1,22 @@
-function outerFunction() {
-  let counter = 0;
+car = {
+  name: 'Kia',
+  drive: function() {
+    console.log(`${this.name} is driving`);
+  }
+};
 
-  return function() {
-    counter++;
-    console.log(counter);
-  };
-}
+anotherCar = {
+  name: 'MG Hector'
+};
 
-let refToInnerFunction = outerFunction();
+//  calling the function on an object
+car.drive();
 
-refToInnerFunction();
-refToInnerFunction();
-refToInnerFunction();
-refToInnerFunction();
+//  let's take the function outside
+let anotherDrive = car.drive;
 
-let refToInnerFunction2 = outerFunction();
+anotherDrive();
 
-refToInnerFunction2();
-refToInnerFunction2();
-refToInnerFunction2();
-refToInnerFunction2();
+//  another object
+anotherCar.drive = car.drive;
+anotherCar.drive();
